@@ -1,0 +1,70 @@
+
+icetime topological timing analysis report
+==========================================
+
+Info: max_span_hack is enabled: estimate is conservative.
+
+Report for critical path:
+-------------------------
+
+        lc40_8_9_7 (LogicCell40) [clk] -> lcout: 0.640 ns
+     0.640 ns net_15476 (cntr[1])
+        t163 (LocalMux) I -> O: 0.330 ns
+        inmux_8_10_17749_17776 (InMux) I -> O: 0.260 ns
+        lc40_8_10_0 (LogicCell40) in1 -> carryout: 0.260 ns
+     1.489 ns t46
+        lc40_8_10_1 (LogicCell40) carryin -> carryout: 0.126 ns
+     1.615 ns t47
+        lc40_8_10_2 (LogicCell40) carryin -> carryout: 0.126 ns
+     1.741 ns t48
+        lc40_8_10_3 (LogicCell40) carryin -> carryout: 0.126 ns
+     1.867 ns t49
+        lc40_8_10_4 (LogicCell40) carryin -> carryout: 0.126 ns
+     1.994 ns t51
+        lc40_8_10_5 (LogicCell40) carryin -> carryout: 0.126 ns
+     2.120 ns t52
+        lc40_8_10_6 (LogicCell40) carryin -> carryout: 0.126 ns
+     2.246 ns t54
+        lc40_8_10_7 (LogicCell40) carryin -> carryout: 0.126 ns
+     2.372 ns net_17816 ($auto$alumacc.cc:474:replace_alu$48.C[9])
+        t56 (ICE_CARRY_IN_MUX) carryinitin -> carryinitout: 0.196 ns
+        lc40_8_11_0 (LogicCell40) carryin -> carryout: 0.126 ns
+     2.695 ns t57
+        lc40_8_11_1 (LogicCell40) carryin -> carryout: 0.126 ns
+     2.821 ns t58
+        lc40_8_11_2 (LogicCell40) carryin -> carryout: 0.126 ns
+     2.947 ns t59
+        lc40_8_11_3 (LogicCell40) carryin -> carryout: 0.126 ns
+     3.074 ns t60
+        lc40_8_11_4 (LogicCell40) carryin -> carryout: 0.126 ns
+     3.200 ns t62
+        lc40_8_11_5 (LogicCell40) carryin -> carryout: 0.126 ns
+     3.326 ns net_17927 ($abc$797$auto$alumacc.cc:491:replace_alu$50[14]$2)
+        inmux_8_11_17927_17937 (InMux) I -> O: 0.260 ns
+        lc40_8_11_6 (LogicCell40) in3 -> lcout: 0.316 ns
+     3.901 ns net_15721 ($abc$797$auto$alumacc.cc:491:replace_alu$50[14])
+        odrv_8_11_15721_17726 (Odrv4) I -> O: 0.372 ns
+        t168 (LocalMux) I -> O: 0.330 ns
+        inmux_9_9_19748_19787 (InMux) I -> O: 0.260 ns
+        lc40_9_9_4 (LogicCell40) in3 -> lcout: 0.316 ns
+     5.178 ns net_17582 ($abc$797$auto$dff2dffe.cc:158:make_patterns_logic$520)
+        odrv_9_9_17582_18800 (Odrv12) I -> O: 0.540 ns
+        t208 (Sp12to4) I -> O: 0.449 ns
+        t207 (Span4Mux_v4) I -> O: 0.372 ns
+        t206 (LocalMux) I -> O: 0.330 ns
+        inmux_9_9_19745_19806 (CEMux) I -> O: 0.603 ns
+     7.471 ns net_19806 ($abc$797$auto$dff2dffe.cc:158:make_patterns_logic$520)
+        lc40_9_9_7 (LogicCell40) ce [setup]: 0.000 ns
+     7.471 ns net_17585 (LED2_m1_r)
+
+Resolvable net names on path:
+     0.640 ns ..  1.229 ns cntr[1]
+     2.372 ns ..  2.569 ns $auto$alumacc.cc:474:replace_alu$48.C[9]
+     3.326 ns ..  3.586 ns $abc$797$auto$alumacc.cc:491:replace_alu$50[14]$2
+     3.901 ns ..  4.862 ns $abc$797$auto$alumacc.cc:491:replace_alu$50[14]
+     5.178 ns ..  7.471 ns $abc$797$auto$dff2dffe.cc:158:make_patterns_logic$520
+                  lcout -> LED2_m1_r
+
+Total number of logic levels: 17
+Total path delay: 7.47 ns (133.85 MHz)
+
