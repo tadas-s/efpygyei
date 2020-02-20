@@ -1,10 +1,10 @@
-PROJ = blink_led
+PROJ = top
 PIN_DEF = ice40hx1k-evb.pcf
 DEVICE = hx1k
 
 all: $(PROJ).rpt $(PROJ).bin
 
-%.blif: %.v
+%.blif: top.v blink_led.v
 	yosys -p 'synth_ice40 -top top -blif $@' $<
 
 %.asc: $(PIN_DEF) %.blif
