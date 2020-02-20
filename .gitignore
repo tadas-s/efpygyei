@@ -1,3 +1,5 @@
 *.blif
 *.asc
 *.bin
+*.rpt
+
